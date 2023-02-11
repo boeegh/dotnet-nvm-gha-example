@@ -1,7 +1,3 @@
-# Example: Build .NET and node using dotnet-nvm
-Simple .NET application with Tailwind built using GitHub Actions:
-
-```yaml
 name: ci
 
 on: [push]
@@ -30,13 +26,3 @@ jobs:
             /publish
             !/publish/**/package.json
             !/publish/**/package-lock.json
-```
-The application is based on a the `ASP.NET Core Web App` template with Tailwind installed using npm. The GitHub Action uses the `boeegh/dotnet-nvm` docker image to:
-
-* Checks out repository from GitHub
-* Sets NVM to use node version 18
-* Installs node packages using npm
-* Runs npm build
-* Runs dotnet publish
-* Uploads the published website artifact to GitHub
-
